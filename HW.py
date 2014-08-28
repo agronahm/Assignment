@@ -1,4 +1,4 @@
 __author__ = 'michael'
-print("hello World")
+print("hello Ghana")
 sum
 
