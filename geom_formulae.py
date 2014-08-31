@@ -24,13 +24,13 @@ def rhombus_perimeter(sidelength):
     Calculate the perimeter of a
     :parameter:length of side
     :return: 4*sidelength
-    let sidelength = 4
-    perimeter = 16
+    let sidelength = 3
+    perimeter = 12
     """
     return 4*sidelength
 
 if __name__ == "__main__":
-    samplesidelength = 4
+    samplesidelength = 3
     print("perimeter:",
           rhombus_perimeter(samplesidelength))
 
