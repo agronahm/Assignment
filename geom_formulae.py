@@ -4,212 +4,248 @@ from math import *
 
 def rectangle_perimeter(length, width):
     """
-     Calculate the perimeter of a rectangle
-    :parameters: length and width
-    :return:(2*length + 2*width)
-    rectangle_perimeter(length=5, width=6):
-    10 + 12 =22
+    Calculate the perimeter of a rectangle
+    :param length: length of rectangle
+    :param width:  width of rectangle
+    :return:perimeter
+    >>>rectangle_perimeter(5,6)
+    22
     """
     return 2*length + 2*width
 
 if __name__ == "__main__":
     samplelength = 5
     samplewidth = 6
-    print("perimeter:",
-           rectangle_perimeter(samplelength, samplewidth))
+    print("perimeter of rectangle:",
+        rectangle_perimeter(samplelength, samplewidth))
 
 
-def rhombus_perimeter(sidelength):
+def rhombus_perimeter(length):
     """
-    Calculate the perimeter of a
-    :parameter:length of side
-    :return: 4*sidelength
-    let sidelength = 3
-    perimeter = 12
+    Calculating the perimeter of a rhombus
+    :param length: length of side of rhombus
+    :return:perimeter
+    >>>rhombus_perimeter(3)
+    12
     """
-    return 4*sidelength
+    return 4*length
 
 if __name__ == "__main__":
-    samplesidelength = 3
-    print("perimeter:",
-          rhombus_perimeter(samplesidelength))
-
+    samplelength = 3
+    print("perimeter of rhombus:",
+          rhombus_perimeter(samplelength))
 
 
 def circle_area(radius):
-     """
-     Calculating the area of a circle with radius 5cm
-     :parameter: length of radius
-     return: area of circle = numpy.pi*(r**2)
-     area of circle with radius 5:
-     78.5398163397
-     """
-     return numpy.pi*radius**2
+    """
+     Calculating the area of a circle
+     :param radius:radius of the circle
+     :return:area
+     >>>circle_area(5)
+     78.5398
+    """
+    return numpy.pi*(radius**2)
 
 if __name__ == "__main__":
      sampleradius = 5
-     print("area:",
+     print("area of circle:",
            circle_area(sampleradius))
 
 
-def parallelogram_area(baselength,height):
-
-   """Calculate area of a parallelogram
-      :parameters:baselength and height
-     :return:baselength*height
-      baselength = 4, height = 4
-      area= 16
+def circlesector_area(angle, radius):
     """
-   return baselength*height
-
-if __name__ == "__main__":
-    samplebaselength = 4
-    sampleheight = 4
-    print("area:",
-        parallelogram_area(samplebaselength,sampleheight))
-
-
-def circlesector_area(sectorangle, radius):
+    Calculating area of a sector of a circle
+    :param angle: angle of sector of the circle
+    :param radius: the radius of circle
+    :return: area of the sector of the circle
+    >>>circlesector_area(30, 5)
+    6.54498
     """
-     Calcualating the area of a sector of a circle with radius
-     5 and angle 30 in degrees
-    :parameter: angle of sector and length of radius
-    :return:2*numpy.pi*radius*(sector angle)/360
-
-    """
-    return 2*numpy.pi*radius*sectorangle/360
+    return numpy.pi*(radius**2)*angle/360
 
 if __name__ == "__main__":
     sampleradius = 5
     sampleangle = 30
-    print("area",
+    print("area sector of circle",
           circlesector_area(sampleangle, sampleradius))
-
-def triangle_area(baselength,height):
-    """
-     Calculate the area of an equilateral triangle with side 2
-    :parameter: length of side and height of triangle
-    :return: 1/2*length of base*height
-    area of equilateral triangle with side length 2cm and height 3**1/2
-     1/2*2*3**2=
-    """
-    return (baselength*height)*(1./2)
-
-if __name__ == "__main__":
-    samplebaselength = 2.0
-    sampleheight = 3**(1./2)
-    print("area:",
-          triangle_area(samplebaselength, sampleheight))
-
-
-def triangle_area1(slantedlength,angle):
-    """area=1/2*slantedlength*numpy.cos(angle)"""
-
-    return 1/2*slantedlength*(tan(angle))
-
-if __name__ == "__main__":
-    sampleangle = numpy.pi/3
-    sampleslantedlength = 2
-    print( "area1:",
-          triangle_area1(sampleslantedlength, sampleangle))
-
-def trapezium_area(horizontallength1,horizontallength2,height):
-
-    """ area of a trapizium
-        :parameter: horizontal length1,horizontal length2 and height
-        :return: (horizontal length1 + horizontal length2)/2*height
-            horizontal length1 = 4 horizontal length2 = 2 and height = 3
-                area = 9
-    """
-    return (horizontallength1 + horizontallength2)/2*height
-
-if __name__ == "__main__":
-    samplehorizontallength1 = 4
-    samplehorizontallength2 = 2
-    sampleheight = 3
-    print("area:",
-          trapezium_area(samplehorizontallength1,samplehorizontallength2,sampleheight))
-
 
 def circle_circumference(radius):
     """
-    Calculating the circumference of a circle radius 5
-    :parameter: radius
-    :return:circumference = 2* numpy.pi * radius
-    2* numpy.pi * (radius=6) =
+    Calculating the circumference of a circle
+    :param radius: radius of circle
+    :return:circumference
+    >>>circle_circumference(5)
+    31.4159
     """
     return 2*numpy.pi*radius
 
 if __name__ == "__main__":
     sampleradius = 5
-    print("circumference:",
+    print("circumference of circle:",
           circle_circumference(sampleradius))
+
+
+def parallelogram_area(base, height):
+    """
+    Calculating area of a parallelogram
+    :param base: length of base of parallelogram
+    :param height:height of parallelogram
+    :return:area
+    >>>parallelogram_area(4, 4)
+    16
+    """
+    return base*height
+
+if __name__ == "__main__":
+    samplebase = 4
+    sampleheight = 4
+    print("area of parallelogram:",
+         parallelogram_area(samplebase, sampleheight))
+
+
+def triangle_area(length, height):
+    """
+    Calculate area of an equilateral triangle
+    :param length: length of base of triangle
+    :param height: height of triangle
+    :return: area
+    >>>triangle_area(2,3**(1/2))
+    1.73205
+    """
+    return (1/2)*(length*height)
+
+if __name__ == "__main__":
+    samplelength = 2
+    sampleheight = 3**(1/2)
+    print("area of triangle first method:",
+          triangle_area(samplelength, sampleheight))
+
+
+def triangle_area1(length):
+    """
+    Calculate the area of equilateral triangle side 2cm
+    :param length: length of a side of the triangle
+    :return: area
+    >>>triangle_area1(2)
+    1.73205
+    """
+    return 1/2*length*(tan(numpy.pi/3))
+
+if __name__ == "__main__":
+    samplelength = 2
+    print("area of triangle second method:",
+          triangle_area1(samplelength))
+
+def trapezium_area(length1, length2, height):
+     """
+     Calculate area of trapezium
+     :param length1: length of one horizontal side of the trapezium
+     :param length2:length of the other horizontal side of the trapezium
+     :param height:height of the trapezium
+     :return:area
+     >>>trapezium_area(4,2,3)
+     9
+     """
+     return height*(length1 + length2)/2
+
+if __name__ == "__main__":
+    samplelength1 = 4
+    samplelength2 = 2
+    sampleheight = 3
+    print("area of trapezium:",
+          trapezium_area(samplelength1, samplelength2, sampleheight))
+
+
+def kite_area(diagonal1, diagonal2):
+    """
+    Calculating area of kite
+    :param diagonal1: length of short diagonal
+    :param diagonal2: length of long diagonal
+    :return:area
+    >>>kite_area(2, 3)
+    6
+    """
+    return diagonal1 * diagonal2
+
+if __name__ == "__main__":
+    samplediagonal1 = 2
+    samplediagonal2 = 3
+    print("area of kite:",
+          kite_area(samplediagonal1,samplediagonal2))
 
 
 def cylinder_volume(radius,height):
     """
-        Calculate the volume of a cylinder
-            :parameter:radius and height
-            :return: numpy.pi*(radius**2)**height
-            radius = 4, height = 7
-             volume = 351.858377202
+     Calculate the volume of a cylinder
+     :param radius of cylinder
+     :param height of cylinder
+     :return: volume
+     >>>cylinder_volume(4,7)
+     351.858377202
     """
     return numpy.pi*(radius**2)*height
 
 if __name__ == "__main__":
     sampleradius = 4
     sampleheight = 7
-    print("volume:",
-          cylinder_volume(sampleradius,sampleheight))
+    print("volume of cylinder:",
+          cylinder_volume(sampleradius, sampleheight))
 
 
 def cuboid_volume(length, width, height):
     """
-     Calculate volume of a cuboid
-     :parameter:sides of length,width and height
-     :return: length* width* height
-     cuboid_volume(length= 4, width=3, height=2):
+    Calculate volume of a cuboid
+    :param length: length of cuboid
+    :param width: width of cuboid
+    :param height: height of cuboid
+    :return:volume
+     >>>cuboid_volume( 4,3,2):
      24
     """
+
     return length*width*height
 
 if __name__ == "__main__":
     samplelength = 4
     samplewidth = 3
     sampleheight = 2
-    print("volume:",
+    print("volume of cuboid:",
           cuboid_volume(samplelength, samplewidth, sampleheight))
 
 
 def sphere_volume(radius):
-    """Calculate volume of sphere
-     :parameter:radius
-     :return:4/3 *numpy.pi*(radius**3)
-     raduis = 2
-     volume = 33.5103216383
+    """
+    Calculate volume of sphere
+     :param radius:radius of sphere
+     :return:volume
+     raduis
+     >>>sphere_volume(2)
+      33.5103216383
      """
     return 4/3 *numpy.pi*(radius**3)
 
 if __name__ == "__main__":
     sampleradius = 2
-    print("volume:",
+    print("volume of sphere:",
           sphere_volume(sampleradius))
 
 
 def cone_volume(radius, height):
     """
-     Calculate volume of sphere
-     :parameter:
-     :return:1/3 *numpy.pi*(radius**2)*height
-     radius = 2, height = 4
-     volume =
-      """
+    Calculate volume of cone
+    :param radius: radius of cone
+    :param height: height of cone
+    :return:volume
+    >>>cone_volume(2,4)
+    16.75516
+    """
+
     return 1/3*height*numpy.pi*(radius**2)
 
 if __name__ == "__main__":
     sampleradius = 2
     sampleheight = 4
-    print("volume:",
+    print("volume of cone:",
          cone_volume(sampleradius, sampleheight))
 
 

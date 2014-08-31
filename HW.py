@@ -2,6 +2,7 @@ __author__ = 'michael'
 print("hello Ghana")
 print("yes Lord")
 import numpy
+from math import *
 def rectangle_perimeter(length, width):
     """
     Calculate the perimeter of a rectangle
@@ -34,3 +35,37 @@ if __name__ == "__main__":
     sampleheight = 4
     print("volume:",
          cone_volume(sampleradius,sampleheight))
+
+
+def triangle_area1(length):
+    """
+    Calculate the area of equilateral triangle side 2cm
+    :param length: length of a side of the triangle
+    :return: area
+    >>>triangle_area1(2)
+    """
+    return 2*(sin(numpy.pi/3))
+
+if __name__ == "__main__":
+    samplelength = 2
+    print("area1:",
+          triangle_area1(samplelength))
+
+def triangle_area(length, height):
+    """
+    Calculate area of an equilateral triangle
+    :param length: length of base of triangle
+    :param height: height of triangle
+    :return: area
+    >>>triangle_area(2,3**(1/2))
+    1.73205
+    """
+    return (1/2)*(length*height)
+
+    return 1/2*length*(tan(numpy.pi/3))
+
+if __name__ == "__main__":
+    samplelength = 2
+    sampleheight = 3**(1/2)
+    print("triangle area:",
+          triangle_area(samplelength, sampleheight))
